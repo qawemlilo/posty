@@ -18,9 +18,8 @@ use App\Http\Controllers\HomeController;
 */
 
 //This is the new L* way of Routing via a controller
-Route::get('/products', [ProductController::class, 'getPage']);
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-Route::get('/products', [App\Http\Controllers\ProductController::class, 'listProducts'])->name('products.listing');
+Route::get('/products', [ProductController::class, 'listProducts'])->name('products.listing');
